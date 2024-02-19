@@ -1,5 +1,4 @@
 import './App.css'
-import Alumno from './Components/Alumno'
 import Navbar from './Components/Navbar'
 import Shop from './Components/Shop'
 
