@@ -6,10 +6,10 @@ const Card = ({ pizza, setCart }) => {
   const [counter, setCounter] = useState(0)
   const [theme, setTheme] = useState(false)
   const obj = {
-    color: theme ? 'orange' : 'red',
-    backgroundColor: theme ? 'white' : 'yellow'
+    padding: 5,
+    color: theme ? '#080708' : '#E6E8E6',
+    backgroundColor: theme ? '#E6E8E6' : '#080708'
   }
-  // const obj = { color: 'orange'}
   const addCart = () => {
     setCart((prevState) => 
     [
@@ -20,14 +20,17 @@ const Card = ({ pizza, setCart }) => {
       }
     ])
   }
+  
   return (
     <div className={CardStyles.cardContainer}>
         <img src={pizza.img} alt="" className={CardStyles.cardImg}/>
         <h3>{pizza.tipo}</h3>
-        <h4 style={obj}>{pizza.precio}</h4>
-        <button onClick={() => setTheme(!theme)}>🍕</button>
+        <h4 style={obj}>
+          {pizza.precio}
+          <button style={obj} onClick={() => setTheme(!theme)}>🍕</button>  
+        </h4>
         <Counter counter={counter} setCounter={setCounter}/>
-        <button onClick={addCart}>Añadir al carrito</button>
+        <button className={CardStyles.cartBtn} onClick={addCart}>Añadir al carrito</button>
     </div>
   )
 }

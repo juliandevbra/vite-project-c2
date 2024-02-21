@@ -1,9 +1,46 @@
 .cardContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: 2px solid #fff;
     border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #709255;
+    color: #FDCA40;
 }
 
 .cardImg{
-    width: 300;
-    
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.btnGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btnGroup button{
+    background-color: transparent;
+    color: #080708;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.btnGroup button:hover {
+    border-color: transparent;
+}
+
+.btnGroup button:focus,
+button:focus-visible {
+  outline:none;
+}
+
+.cartBtn {
+    background-color: #FDCA40;
+    color:#080708;
 }

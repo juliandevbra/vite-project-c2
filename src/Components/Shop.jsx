@@ -5,7 +5,7 @@ import Cart from './Cart'
 
 const Shop = () => {
     const [cart, setCart] = useState([])
-    console.log(cart)
+    // console.log(cart)
     let pizzas = [
         { id: 1, tipo: 'Muzzarella', precio: '$1200', img: imgpizza },
         { id: 2, tipo: 'Fugazza', precio: '$1250', img: 'https://cdn0.recetasgratis.net/es/posts/7/0/2/pizza_fugazza_7207_600.webp' },
@@ -18,7 +18,9 @@ const Shop = () => {
     <div>
         <h1>Lista de pizzas</h1>
         <Cart cart={cart}/>
-        {pizzas.map(pizza => <Card key={pizza.id} pizza={pizza} setCart={setCart}/>)}
+        <div className='list-container'>
+          {pizzas.map(pizza => <Card key={pizza.id} pizza={pizza} setCart={setCart}/>)}
+        </div>
     </div>
   )
 }

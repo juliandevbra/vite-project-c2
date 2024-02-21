@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import CardStyles from '../Styles/Card.module.css'
 const Counter = ({counter, setCounter}) => {
 
     // console.log(useState('algo'))
@@ -14,7 +14,7 @@ const Counter = ({counter, setCounter}) => {
         setCounter(counter - 1)
     }
   return (
-    <div>
+    <div className={CardStyles.btnGroup}>
         <button onClick={subtract}>-</button>
         <h3>{counter}</h3>
         <button onClick={add}>+</button>

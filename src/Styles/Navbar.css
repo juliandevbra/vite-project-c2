@@ -1,9 +1,10 @@
 .navbar{
+    width: 98.7vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
 h4{
-    color: red
+    color: #E6E8E6;
 }
